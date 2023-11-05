@@ -15,4 +15,4 @@ console.log(__filename);
 // node
 
 
-// idceicsicnsic
+// mode mode node node
