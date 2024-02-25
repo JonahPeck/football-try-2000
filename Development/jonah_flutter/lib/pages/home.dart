@@ -9,5 +9,4 @@ class MyWidget extends StatelessWidget {
   }
 }
 
-//want to build app
-//today
+//what is the point?
