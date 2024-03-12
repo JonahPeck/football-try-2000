@@ -1,30 +1,13 @@
-import random
+import datetime
 
-random_number = random.randint(1, 3999)
+def day_of_week():
+    date_str = input("Enter a date (YYYY-MM-DD): ")
+    try:
+        date_obj = datetime.datetime.strptime(date_str, '%Y-%m-%d')
+        return date_obj.strftime('%A')
+    except ValueError:
+        return "Invalid date format. Please provide the date in YYYY-MM-DD format."
 
-
-def int_to_roman(num):
-    val = [
-        1000, 900, 500, 400,
-        100, 90, 50, 40,
-        10, 9, 5, 4,
-        1
-    ]
-    syms = [
-        "M", "CM", "D", "CD",
-        "C", "XC", "L", "XL",
-        "X", "IX", "V", "IV",
-        "I"
-    ]
-    roman_numeral = ''
-    i = 0
-    while num > 0:
-        for _ in range(num // val[i]):
-            roman_numeral += syms[i]
-            num -= val[i]
-        i += 1
-    return roman_numeral
-
-# Generate a random number between 1 and 3999
-print(f"The random number is: {random_number}")
-print(f"The Roman numeral representation of {random_number} is: {int_to_roman(random_number)}")
+# Example usage:
+print("Let's find out the day of the week!")
+print(f"The day of the week for the entered date is: {day_of_week()}")
