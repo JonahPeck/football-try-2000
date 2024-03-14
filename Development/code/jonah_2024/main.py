@@ -1,15 +1,43 @@
-import datetime
-
-def day_of_week():
-    date_str = input("Enter a date (YYYY-MM-DD): ")
-    try:
-        date_obj = datetime.datetime.strptime(date_str, '%Y-%m-%d')
-        return date_obj.strftime('%A')
-    except ValueError:
-        return "Invalid date format. Please provide the date in YYYY-MM-DD format."
+def major_language(country_name):
+    country_language = {
+        "China": "Mandarin",
+        "India": "Hindi",
+        "United States": "English",
+        "Indonesia": "Indonesian",
+        "Pakistan": "Urdu",
+        "Brazil": "Portuguese",
+        "Nigeria": "English",
+        "Bangladesh": "Bengali",
+        "Russia": "Russian",
+        "Mexico": "Spanish",
+        "Japan": "Japanese",
+        "Ethiopia": "Amharic",
+        "Philippines": "Filipino",
+        "Egypt": "Arabic",
+        "Vietnam": "Vietnamese",
+        "DR Congo": "French",
+        "Turkey": "Turkish",
+        "Iran": "Persian",
+        "Germany": "German",
+        "Thailand": "Thai"
+        # Add more countries and their major languages as needed
+    }
+    
+    # Filter the dictionary to include only the 20 most populated countries
+    top_20_countries = [
+        "China", "India", "United States", "Indonesia", "Pakistan",
+        "Brazil", "Nigeria", "Bangladesh", "Russia", "Mexico",
+        "Japan", "Ethiopia", "Philippines", "Egypt", "Vietnam",
+        "DR Congo", "Turkey", "Iran", "Germany", "Thailand"
+    ]
+    
+    if country_name in top_20_countries:
+        return f"The major language spoken in {country_name} is {country_language[country_name]}."
+    else:
+        return "Country not found or not within the 20 most populated countries."
 
 # Example usage:
-print("Let's find out the day of the week!")
-print(f"The day of the week for the entered date is: {day_of_week()}")
+country_name = input("Enter a country name: ")
+print(major_language(country_name))
 
-# comment
+#going to bed
