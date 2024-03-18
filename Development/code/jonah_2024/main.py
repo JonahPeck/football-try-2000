@@ -40,7 +40,4 @@ def major_language(country_name):
 country_name = input("Enter a country name: ")
 print(major_language(country_name))
 
-#going to bed
-#going to bed again
-#go
-#flutter tomorrow
+#i want to get this
