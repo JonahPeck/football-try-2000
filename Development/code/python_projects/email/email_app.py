@@ -6,12 +6,11 @@ import smtplib
 email_sender = 'PeckJonahC@gmail.com'
 email_password = 'hghm mctd vlpe flql'
 
-email_receiver = 'losicas487@hdrlog.com'
+email_receiver = input('What email would you like to send to? ')
 
-subject = "Talk to you soon"
-body = """
-I look forward to talking with you soon
-"""
+subject = input('What would you like the subject to be? ')
+body = input('What would you like the body to say?')
+
 
 em = EmailMessage()
 em['From'] = email_sender
